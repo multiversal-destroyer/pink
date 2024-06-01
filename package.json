@@ -1,19 +1,19 @@
 {
-  "name": "{{projectName}}",
+  "name": "pink",
   "private": true,
   "description": "Личный проект «{{projectTitle}}» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@htmlacademy/editorconfig-cli": "3.0.0",
     "autoprefixer": "10.2.5",
-    "browser-sync": "2.26.14",
+    "browser-sync": "3.0.2",
     "gulp": "4.0.2",
     "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.0",
-    "gulp-sass": "4.1.0",
+    "gulp-postcss": "10.0.0",
+    "gulp-sass": "5.1.0",
     "gulp-sourcemaps": "3.0.0",
-    "postcss": "8.2.8",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.10"
+    "postcss": "8.4.38",
+    "stylelint": "16.3.1",
+    "stylelint-config-htmlacademy": "4.2.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -25,7 +25,9 @@
   "browserslist": [
     "last 2 versions",
     "not dead",
-    "not ie <= 11"
+    "not op_mini all",
+    "not and_uc > 0",
+    "not < 0.2%"
   ],
   "editorconfig-cli": [
     "*.json",
@@ -36,6 +38,6 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^12 || ^14"
+    "node": "^18.18 || ^20.9"
   }
 }
