@@ -1,0 +1,21 @@
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 79px;
+
+  }
+
+  &__link {
+    line-height: 18px;
+    text-decoration: none;
+    color: $basic-white;
+
+  }
+
+}

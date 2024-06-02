@@ -27,7 +27,7 @@
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-display: swap;
   src: url("../fonts/opensans.woff2") format("woff2"),
     url("../fonts/opensans.woff") format("woff");
@@ -36,7 +36,7 @@
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-display: swap;
   src: url("../fonts/opensansbold.woff2") format("woff2"),
     url("../fonts/opensansbold.woff") format("woff");
@@ -45,7 +45,7 @@
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: lighter;
+  font-weight: 300;
   font-display: swap;
   src: url("../fonts/opensanslight.woff2") format("woff2"),
     url("../fonts/opensanslight.woff") format("woff");
