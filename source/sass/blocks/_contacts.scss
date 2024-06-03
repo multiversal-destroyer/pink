@@ -1,0 +1,32 @@
+.contacts {
+
+  &__description {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 31px;
+  }
+}
+
+.contacts-item {
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__content {
+    font-size: 24px;
+    font-weight: 300;
+    color: $pink;
+    text-decoration: none;
+
+    &--address {
+      font-style: normal;
+    }
+  }
+}
