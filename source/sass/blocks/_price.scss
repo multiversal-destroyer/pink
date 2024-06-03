@@ -1,0 +1,60 @@
+.price-table {
+  border-collapse: collapse;
+
+  &__cell {
+    border: 2px solid $gray-table-border;
+  }
+
+  &__cell-header {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $basic-white;
+    background-color: $main-gray;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+
+    &--cost {
+      font-weight: 300;
+      color: $basic-white;
+      background-color: $main-gray;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  &__row-body {
+    background-color: $basic-white;
+  }
+
+  &__cell-body {
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+  }
+
+  &__status--available {
+    position: absolute;
+    content: "";
+    background-image: url("/source/img/svg/yes.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 21px;
+  }
+
+  &__status--unavailable {
+    position: absolute;
+    content: "";
+    background-image: url("/source/img/svg/no.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
+  }
+}
+
+
+
+
