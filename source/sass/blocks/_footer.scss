@@ -1,0 +1,26 @@
+.footer-socials {
+
+  &__list {
+    display: flex;
+    column-gap: 14px;
+    list-style: none;
+  }
+}
+
+.footer-item {
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &--academy {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+  }
+}
+
+
+
