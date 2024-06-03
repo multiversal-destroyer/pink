@@ -1,0 +1,36 @@
+.research {
+  display: flex;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 24px;
+    margin-left: 72px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $basic-black;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 24px;
+    color: $pink;
+  }
+}
+
+
+
+
+
+
+
