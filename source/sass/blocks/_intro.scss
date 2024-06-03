@@ -1,0 +1,73 @@
+.intro {
+  position: relative;
+  background-image: url("/source/img/back-desktop.png");
+  color: $basic-white;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   background-image: url("/source/img/phone.png");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   width: 320px;
+  //   height: 286px;
+  // }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+}
+
+.intro-button {
+  border: 3px solid $basic-white;
+  border-radius: 29px;
+  padding: 18px 35px; // -3
+// Проблема.
+  &__description {
+    font-weight: 700;
+  }
+}
+
+.devices {
+  display: flex;
+  gap: 35px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+
+    &--iphone {
+      background-image: url("/source/img/svg/apple-logo.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 56px;
+    }
+    &--android {
+      background-image: url("/source/img/svg/android-logo.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 43px;
+      height: 47px;
+    }
+    &--windows {
+      background-image: url("/source/img/svg/microsoft-logo.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 44px;
+      height: 41px;
+    }
+  }
+}
+
