@@ -1,0 +1,52 @@
+.photo {
+
+  &__title {
+    font-size: 24px;
+    font-weight: 300;
+    color: $basic-white;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+.card {
+  line-height: 24px;
+
+  &__image {
+    display: block;
+  }
+
+  &__wrapper {
+    background-color: $gray-light;
+  }
+
+  &__wrapper-user {
+    display: flex;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__time {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 14px;
+  }
+
+  &__like {
+    color: $pink;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+
