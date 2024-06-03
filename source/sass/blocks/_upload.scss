@@ -1,0 +1,33 @@
+.upload {
+
+  &__description {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &__form {
+    background-color: $gray-light;
+  }
+}
+
+.upload-form {
+
+  &__finding {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    border: 3px solid $pink;
+    border-radius: 29px;
+    padding: 18px 35px; // -3
+    color: $pink;
+    font-weight: 700;
+    width: 280px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+
+
