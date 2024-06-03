@@ -1,0 +1,21 @@
+.slider-pagination {
+  display: flex;
+  column-gap: 19px;
+  list-style: none;
+
+  &__button {
+    background-color: $main-gray30;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    &--current {
+      background-color: $basic-white;
+      outline: 3px solid $main-gray;
+
+    }
+  }
+
+}
+
+
