@@ -1,0 +1,47 @@
+.reviews-slider {
+
+  &__blockquote {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__quote {
+    line-height: 30px;
+  }
+
+  &__cite {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: normal;
+    color: $basic-black;
+    margin-bottom: 31px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+.reviews-pagination {
+  display: flex;
+  column-gap: 19px;
+  list-style: none;
+
+  &__button {
+    background-color: $main-gray30;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    &--current {
+      background-color: $basic-white;
+      outline: 3px solid $main-gray;
+
+    }
+  }
+
+}
+
+
