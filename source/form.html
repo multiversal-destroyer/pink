@@ -37,63 +37,25 @@
     </header>
 
     <main class="main">
-      <h1 class="main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-
       <section class="lottery">
+        <h1 class="lottery__title main-background">Конкурс на самое безбашенное путешествие с Пинк</h1>
         <p class="lottery__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
 
         <form class="lottery__form form" action="">
-          <div class="form__group form-group">
-            <label class="form-group__label" for="last-name">Фамилия:</label>
-            <input class="form-group__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *">
-          </div>
-          <div class="form__group form-group">
-            <label class="form-group__label" for="first-name">Имя:</label>
-            <input class="form-group__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *">
-          </div>
-          <div class="form__group form-group">
-            <label class="form-group__label" for="middle-name">Отчество:</label>
-            <input class="form-group__input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
-          </div>
-
           <fieldset class="form__fieldset form-fieldset">
-            <legend class="form-fieldset__legend">С каким приложением путешествовали?</legend>
-            <ul class="form-fieldset__list">
-              <li class="form-fieldset__item fieldset-item">
-                <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="radio" name="iOS" checked>
-                  <span class="fieldset-item__mark fieldset-item__mark--radio"></span>
-                  <span class="fieldset-item__description">Pink для iOS</span>
-                </label>
-              </li>
-              <li class="form-fieldset__item fieldset-item">
-                <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="radio" name="Android">
-                  <span class="fieldset-item__mark fieldset-item__mark--radio"></span>
-                  <span class="fieldset-item__description">Pink на Android</span>
-                </label>
-              </li>
-              <li class="form-fieldset__item fieldset-item">
-                <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="radio" name="Windows-Phone">
-                  <span class="fieldset-item__mark fieldset-item__mark--radio"></span>
-                  <span class="fieldset-item__description">Windows Phone</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="form__fieldset form-fieldset">
-            <legend class="form-fieldset__legend">Контактная информация</legend>
-              <div class="form-fieldset__group fieldset-group">
-                <label class="fieldset-group__label" for="phone">Номер телефона</label>
-                <input class="fieldset-group__input fieldset-group__input--phone" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
-              </div>
-
-              <div class="form-fieldset__group fieldset-group">
-                <label class="fieldset-group__label" for="mail">Адрес почты</label>
-                <input class="fieldset-group__input fieldset-group__input--mail" type="text" id="mail" name="mail" placeholder="Введите почту *">
-              </div>
+            <legend class="visually-hidden">Ваш антропоним</legend>
+            <div class="form-fieldset__group fieldset-group">
+              <label class="fieldset-group__label" for="last-name">Фамилия:</label>
+              <input class="fieldset-group__input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *">
+            </div>
+            <div class="form-fieldset__group fieldset-group">
+              <label class="fieldset-group__label" for="first-name">Имя:</label>
+              <input class="fieldset-group__input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *">
+            </div>
+            <div class="form-fieldset__group fieldset-group">
+              <label class="fieldset-group__label" for="middle-name">Отчество:</label>
+              <input class="fieldset-group__input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+            </div>
           </fieldset>
 
           <fieldset class="form__fieldset form-fieldset">
@@ -101,44 +63,84 @@
             <ul class="form-fieldset__list">
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="checkbox" name="q" checked>
+                  <input class="fieldset-item__input visually-hidden" type="checkbox" name="q" checked>
                   <span class="fieldset-item__mark fieldset-item__mark--checkbox"></span>
-                  <span class="fieldset-item__description">Сделал селфи с акулой</span>
+                  <span class="fieldset-item__description fieldset-item__description--checkbox">Сделал селфи с акулой</span>
                 </label>
               </li>
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="checkbox" name="w">
+                  <input class="fieldset-item__input visually-hidden" type="checkbox" name="w">
                   <span class="fieldset-item__mark fieldset-item__mark--checkbox"></span>
-                  <span class="fieldset-item__description">Видел Чака Норриса</span>
+                  <span class="fieldset-item__description fieldset-item__description--checkbox">Видел Чака Норриса</span>
                 </label>
               </li>
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="checkbox" name="e" checked>
+                  <input class="fieldset-item__input visually-hidden" type="checkbox" name="e" checked>
                   <span class="fieldset-item__mark fieldset-item__mark--checkbox"></span>
-                  <span class="fieldset-item__description">Удержал башню</span>
+                  <span class="fieldset-item__description fieldset-item__description--checkbox">Удержал башню</span>
                 </label>
               </li>
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="checkbox" name="r" checked>
+                  <input class="fieldset-item__input visually-hidden" type="checkbox" name="r" checked>
                   <span class="fieldset-item__mark fieldset-item__mark--checkbox"></span>
-                  <span class="fieldset-item__description">Обгорел на пляже</span>
+                  <span class="fieldset-item__description fieldset-item__description--checkbox">Обгорел на пляже</span>
                 </label>
               </li>
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="checkbox" name="t">
+                  <input class="fieldset-item__input visually-hidden" type="checkbox" name="t">
                   <span class="fieldset-item__mark fieldset-item__mark--checkbox"></span>
-                  <span class="fieldset-item__description">Накупил сувениров</span>
+                  <span class="fieldset-item__description fieldset-item__description--checkbox">Накупил сувениров</span>
                 </label>
               </li>
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
-                  <input class="visually-hidden" type="checkbox" name="y">
+                  <input class="fieldset-item__input visually-hidden" type="checkbox" name="y">
                   <span class="fieldset-item__mark fieldset-item__mark--checkbox"></span>
-                  <span class="fieldset-item__description">Разгромил отель</span>
+                  <span class="fieldset-item__description fieldset-item__description--checkbox">Разгромил отель</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset form-fieldset">
+            <legend class="visually-hidden">Контактная информация</legend>
+            <div class="form-fieldset__group fieldset-group">
+              <label class="fieldset-group__label" for="phone">Номер телефона</label>
+              <input class="fieldset-group__input fieldset-group__input--phone" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
+            </div>
+
+            <div class="form-fieldset__group fieldset-group">
+              <label class="fieldset-group__label" for="mail">Адрес почты</label>
+              <input class="fieldset-group__input fieldset-group__input--mail" type="text" id="mail" name="mail" placeholder="Введите почту *">
+            </div>
+          </fieldset>
+
+          <fieldset class="form__fieldset form-fieldset">
+            <legend class="form-fieldset__legend">С каким приложением путешествовали?</legend>
+            <ul class="form-fieldset__list">
+              <li class="form-fieldset__item fieldset-item">
+                <label class="fieldset-item__label">
+                  <input class="fieldset-item__input visually-hidden" type="radio" name="iOS" checked>
+                  <span class="fieldset-item__mark fieldset-item__mark--radio"></span>
+                  <span class="fieldset-item__description fieldset-item__description--radio">Pink для iOS</span>
+                </label>
+              </li>
+              <li class="form-fieldset__item fieldset-item">
+                <label class="fieldset-item__label">
+                  <input class="fieldset-item__input visually-hidden" type="radio" name="Android">
+                  <span class="fieldset-item__mark fieldset-item__mark--radio"></span>
+                  <span class="fieldset-item__description fieldset-item__description--radio">Pink на Android</span>
+                </label>
+              </li>
+              <li class="form-fieldset__item fieldset-item">
+                <label class="fieldset-item__label">
+                  <input class="fieldset-item__input visually-hidden" type="radio" name="Windows-Phone">
+                  <span class="fieldset-item__mark fieldset-item__mark--radio"></span>
+                  <span class="fieldset-item__description fieldset-item__description--radio">Windows Phone</span>
                 </label>
               </li>
             </ul>
@@ -146,16 +148,16 @@
 
           <fieldset class="form__fieldset form-fieldset">
             <legend class="form-fieldset__legend">Опишите свои эмоции</legend>
-              <label class="visually-hidden" for="rt">Номер телефона</label>
-              <textarea class="form-fieldset__textarea" name="" id="rt" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <label class="visually-hidden" for="rt"></label>
+            <textarea class="form-fieldset__textarea" rows="10" cols="35" name="" id="rt" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
           <div class="form__wrapper">
-            <button class="form__button form-button" type="submit">
+            <button class="form__button form-button button" type="submit">
               <span class="form-button__description">Отправить форму</span>
             </button>
 
-            <p class="form__description"><span>*</span> — обязательные для заполнения поля</p>
+            <p class="form__description"><span class="form__span">*</span> — обязательные для заполнения поля</p>
           </div>
         </form>
 

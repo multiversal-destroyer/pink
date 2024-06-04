@@ -1,0 +1,146 @@
+.lottery {
+
+  &__title {
+    font-size: 24px;
+    font-weight: 300;
+    color: $basic-white;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+.form {
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 30px;
+    border: none;
+
+    &:nth-child(2n) {
+      background-color: $gray-light;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__span {
+    color: $pink;
+  }
+}
+
+.form-button {
+  background-color: $green;
+  padding: 23px 45px;
+  border-radius: 2px;
+
+  &__description {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $basic-white;
+  }
+}
+
+.form-fieldset {
+  position: relative;
+  padding: 42px 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
+  }
+
+  &__legend {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+    color: $pink;
+    margin-bottom: 44px;
+    top: 42px;
+  }
+
+  &__textarea {
+    border: 2px solid $gray-table-border;
+  }
+}
+
+.fieldset-group {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 14px;
+    line-height: 30px;
+    color: $pink;
+  }
+
+  &__input {
+    border: 2px solid $gray-table-border;
+    padding: 23px 0 23px 20px;
+    width: 276px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.fieldset-item {
+
+  &__label {
+    position: relative;
+  }
+
+  &__description { // Изменить для каждой твари.
+
+    &--checkbox {
+      margin-left: calc(35px + 22px);
+    }
+
+    &--radio {
+      margin-left: calc(37px + 31px);
+    }
+  }
+
+  &__input[type="checkbox"] + .fieldset-item__mark--checkbox {
+    position: absolute;
+    content: "";
+    background-image: url("/source/img/svg/checkbox.svg");
+    width: calc(35px + 2px * 2); // Борт, ебать его в рот.
+    height: calc(35px + 2px * 2);
+  }
+
+  &__input[type="checkbox"]:checked + .fieldset-item__mark--checkbox::before {
+    position: absolute;
+    content: "";
+    background-image: url("/source/img/svg/checkbox-on.svg");
+    width: calc(35px + 2px * 2);
+    height: calc(35px + 2px * 2);
+  }
+
+  &__input[type="radio"] + .fieldset-item__mark--radio {
+    position: absolute;
+    content: "";
+    background-image: url("/source/img/svg/radio.svg");
+    width: calc(37px + 2px * 2); // Ещё один борт, ебать его в рот too.
+    height: calc(37px + 2px * 2);
+  }
+
+  &__input[type="radio"]:checked + .fieldset-item__mark--radio::before {
+    position: absolute;
+    content: "";
+    background-image: url("/source/img/svg/radio-on.svg");
+    width: calc(37px + 2px * 2);
+    height: calc(37px + 2px * 2);
+  }
+}
+
