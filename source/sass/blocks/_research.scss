@@ -1,12 +1,27 @@
 .research {
-  display: flex;
+  position: relative;
+  display: none;
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 138px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $gray-light;
+    padding: 115px 166px 120px 0;
+    margin-bottom: 0;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 24px;
-    margin-left: 72px;
+    grid-column: 2 / -1;
   }
 
   &__title {
