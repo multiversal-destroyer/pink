@@ -1,11 +1,40 @@
+.price {
+  position: relative;
+  display: none; // Открыть.
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+  // Давай, иди вниз - в ад.
+  // . . .
+}
+
 .price-table {
+  // position: absolute;
+  margin: 0 auto;
   border-collapse: collapse;
+  // right: -80%;
+  // right: -255px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
 
   &__cell {
     border: 2px solid $gray-table-border;
+
+    &[rowspan="2"] {
+      display: none;
+      border: none;
+
+      @media (min-width: $tablet-width) {
+        display: table-cell;
+      }
+    }
   }
 
   &__cell-header {
+    box-sizing: border-box;
     font-size: 16px;
     font-weight: 700;
     line-height: 30px;
@@ -14,13 +43,39 @@
     text-transform: uppercase;
     vertical-align: middle;
     text-align: center;
+    border-bottom: none;
+    padding: 10px 20px 0 20px;
 
-    &--cost {
-      font-weight: 300;
-      color: $basic-white;
-      background-color: $main-gray;
-      vertical-align: middle;
-      text-align: center;
+    @media (min-width: $tablet-width) {
+      min-width: 152px;
+      // width: 26.73%;
+      padding: 10px 10px 0 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 18px;
+      min-width: 233px;
+      padding: 10px 20px 0 20px;
+    }
+  }
+
+  &__cell-cost {
+    box-sizing: border-box;
+    font-weight: 300;
+    color: $basic-white;
+    background-color: $main-gray;
+    vertical-align: middle;
+    text-align: center;
+    border-top: none;
+    padding: 0 20px 25px 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 10px 9px 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+      padding: 0 20px 20px 20px;
     }
   }
 
@@ -29,32 +84,80 @@
   }
 
   &__cell-body {
+    box-sizing: border-box;
     font-size: 14px;
     line-height: 30px;
     position: relative;
+    min-width: 276px;
+    padding: 13px 20px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 152px;
+      padding: 6px 15px;
+    }
+
+    &--title {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: table-cell;
+        min-width: 152px;
+        padding: 6px 15px;
+      }
+
+      @media (min-width: $desktop-width) {
+        min-width: 234px;
+        font-size: 18px;
+        padding: 13px 22px;
+      }
+    }
   }
 
-  &__status--available {
-    position: absolute;
-    content: "";
-    background-image: url("/source/img/svg/yes.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 31px;
-    height: 21px;
+  &__cell-title {
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
-  &__status--unavailable {
-    position: absolute;
-    content: "";
-    background-image: url("/source/img/svg/no.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 27px;
-    height: 27px;
+  &__status {
+    left: 95%;
+    transform: translate(-100%);
+
+    @media (min-width: $tablet-width) {
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%);
+    }
+
+    &--available {
+      position: absolute;
+      content: "";
+      background-image: url("/source/img/svg/yes.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 31px;
+      height: 21px;
+    }
+
+    &--unavailable {
+      position: absolute;
+      content: "";
+      background-image: url("/source/img/svg/no.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 27px;
+      height: 27px;
+    }
   }
 }
 
+.price-pagination {
+  display: flex;
+  justify-content: center;
 
-
-
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
