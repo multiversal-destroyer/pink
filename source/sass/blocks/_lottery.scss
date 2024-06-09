@@ -1,20 +1,77 @@
+// *Нервное ХАХХХАХАИХИИХХВХИХАХАИХХИХААААААААААААААА*
+
 .lottery {
 
   &__title {
+    background-image: url("/source/img/back-desktop.png");
     font-size: 24px;
     font-weight: 300;
     color: $basic-white;
+    padding: 102px 46px 51px 46px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 50px;
+      padding: 191px 46px 74px 46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 191px 146px 74px 146px;
+    }
+  }
+
+  &__description-group {
+    padding-top: 54px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 82px;
+      padding-top: 100px;
+    }
   }
 
   &__description {
     font-size: 14px;
     line-height: 30px;
+    text-align: center;
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+
+
+    &--second {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
 }
 
 .form {
+  box-sizing: border-box;
+  background-color: $basic-white;
+  // padding-top: 54px;
+
+  @media (min-width: $tablet-width) {
+    // padding: 0 20px;
+    padding: 0 3%;
+    // padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    padding: 0 10%;
+  }
 
   &__fieldset {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -24,9 +81,35 @@
     &:nth-child(2n) {
       background-color: $gray-light;
     }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 50px;
+
+      &:nth-child(2n) {
+        border: 2px solid $gray-table-border;
+        background-color: $basic-white;
+      }
+    }
   }
 
-  &__description {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 46px;
+    order: 6;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: space-between
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__wrapper-description {
     font-size: 14px;
     line-height: 30px;
     text-transform: uppercase;
@@ -34,10 +117,18 @@
 
   &__span {
     color: $pink;
+
+    &--delete {
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
   }
 }
 
 .form-button {
+  box-sizing: border-box;
   background-color: $green;
   padding: 23px 45px;
   border-radius: 2px;
@@ -52,12 +143,75 @@
 
 .form-fieldset {
   position: relative;
-  padding: 42px 0;
+  padding: 42px 22px;
+
+  @media (min-width: $tablet-width) {
+    // padding: 42px 60px;
+    padding: 42px 8%;
+
+    // &:nth-child(2n-1) {
+    //   padding: 42px 0 0 0;
+    //   padding: 0;
+    // }
+
+    &--name {
+      order: 1;
+      padding: 0;
+    }
+
+    &--application {
+      order: 2;
+    }
+
+    &--info {
+      border: 2px solid $gray-table-border;
+      order: 3;
+
+      @media (min-width: $desktop-width) {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        column-gap: 5%;
+      }
+    }
+
+    &--advance {
+      order: 4;
+
+      @media (min-width: $desktop-width) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &--emotions {
+      order: 5;
+      border: 2px solid $gray-table-border;
+
+      @media (min-width: $desktop-width) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
 
   &__list {
     display: flex;
     flex-direction: column;
     row-gap: 38px;
+    list-style: none;
+
+    &--advance {
+      @media (min-width: $desktop-width) {
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 260px 260px 260px;
+        column-gap: 5%;
+        margin: 0 auto;
+      }
+
+      // @media (min-width: 1800px) {
+      //   grid-template-columns: 260px 260px 260px 260px;
+      // }
+    }
   }
 
   &__legend {
@@ -68,31 +222,106 @@
     color: $pink;
     margin-bottom: 44px;
     top: 42px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+      margin-bottom: 0;
+      padding: 0 30px;
+    }
+
+    &--info {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
 
   &__textarea {
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 15px;
     border: 2px solid $gray-table-border;
+    width: 100%;
   }
 }
 
 .fieldset-group {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--info {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
 
   &__label {
     font-size: 14px;
+    text-transform: uppercase;
     line-height: 30px;
     color: $pink;
+    margin-left: 21px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 20px;
+      margin-left: 0;
+
+      &--phone {
+        margin: 10px 0 0 20px;
+      }
+
+      &--mail {
+        margin: 10px 0 0 20px;
+      }
+    }
   }
 
   &__input {
+    position: relative;
+    box-sizing: border-box;
     border: 2px solid $gray-table-border;
-    padding: 23px 0 23px 20px;
-    width: 276px;
+    padding: 18px 0 18px 20px;
     font-size: 18px;
     line-height: 30px;
+    width: 100%;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   background-color: $gray-table-border;
+    //   width: 59px;
+    //   height: 59px;
+    //   z-index: 20;
+    // }
+
+    // @media (min-width: $tablet-width) {
+
+
+    // }
   }
 }
+
+// .fieldset-group__input::before {
+//     content: "";
+//     position: absolute;
+//     background-color: $gray-table-border;
+//     width: 59px;
+//     height: 59px;
+//     z-index: 20;
+// }
 
 .fieldset-item {
 

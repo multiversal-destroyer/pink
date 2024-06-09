@@ -77,7 +77,7 @@
   &--tablet {
     display: none;
 
-    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    @media (max-width: $tablet-width-only) {
       display: block;
     }
   }

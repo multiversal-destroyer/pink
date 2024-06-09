@@ -11,8 +11,16 @@
     <header class="header">
       <nav class="header__navigation header-navigation">
         <a class="header-navigation__link-logo" href="index.html">
-          <img class="header-navigation__logo" src="img/svg/lobo_mobile.svg" width="96" height="15" alt="Логотип Pink">
+          <img class="header-navigation__logo--mobile header-navigation__logo" src="img/svg/lobo_mobile.svg" width="74" height="23" alt="Логотип Pink">
+          <img class="header-navigation__logo--tablet header-navigation__logo" src="img/svg/logotype-white-tablet.svg" width="145" height="40" alt="Логотип Pink">
+          <img class="header-navigation__logo--desktop header-navigation__logo" src="img/svg/logotype-white-desktop.svg" width="147" height="40" alt="Логотип Pink">
         </a>
+        <button class="header-navigation__toggle button">
+          <svg class="menu-icon" width="50" height="24" viewBox="0 0 50 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 0 0 0 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 3V1a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 13v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 23v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Z" fill="#fff"/>
+          </svg>
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="header-navigation__list">
           <li class="header-navigation__item">
             <a href="#" class="header-navigation__link">Главная</a>
@@ -27,22 +35,20 @@
             <a href="catalog.html" class="header-navigation__link">HTML Academy</a>
           </li>
         </ul>
-        <button class="header-navigation__toggle button">
-          <svg class="menu-icon" width="50" height="24" viewBox="0 0 50 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 0 0 0 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 3V1a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 13v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 23v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Z" fill="#fff"/>
-          </svg>
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
       </nav>
     </header>
 
     <main class="main">
       <section class="lottery">
-        <h1 class="lottery__title main-background">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <p class="lottery__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <h1 class="lottery__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
 
+        <div class="lottery__description-group">
+          <p class="lottery__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="lottery__description--second lottery__description">Пожалуйста, заполните форму ниже:</p>
+        </div>
         <form class="lottery__form form" action="">
-          <fieldset class="form__fieldset form-fieldset">
+
+          <fieldset class="form__fieldset form-fieldset--name form-fieldset">
             <legend class="visually-hidden">Ваш антропоним</legend>
             <div class="form-fieldset__group fieldset-group">
               <label class="fieldset-group__label" for="last-name">Фамилия:</label>
@@ -58,9 +64,9 @@
             </div>
           </fieldset>
 
-          <fieldset class="form__fieldset form-fieldset">
+          <fieldset class="form__fieldset form-fieldset--advance form-fieldset">
             <legend class="form-fieldset__legend">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="form-fieldset__list">
+            <ul class="form-fieldset__list--advance form-fieldset__list">
               <li class="form-fieldset__item fieldset-item">
                 <label class="fieldset-item__label">
                   <input class="fieldset-item__input visually-hidden" type="checkbox" name="q" checked>
@@ -106,20 +112,20 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset form-fieldset">
-            <legend class="visually-hidden">Контактная информация</legend>
-            <div class="form-fieldset__group fieldset-group">
-              <label class="fieldset-group__label" for="phone">Номер телефона</label>
-              <input class="fieldset-group__input fieldset-group__input--phone" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
+          <fieldset class="form__fieldset form-fieldset--info form-fieldset">
+            <legend class="form-fieldset__legend--info form-fieldset__legend">Контактная информация</legend>
+            <div class="form-fieldset__group fieldset-group--info fieldset-group">
+              <label class="fieldset-group__label--phone fieldset-group__label" for="phone">Номер телефона</label>
+              <input class="fieldset-group__input--phone fieldset-group__input" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
             </div>
 
-            <div class="form-fieldset__group fieldset-group">
-              <label class="fieldset-group__label" for="mail">Адрес почты</label>
-              <input class="fieldset-group__input fieldset-group__input--mail" type="text" id="mail" name="mail" placeholder="Введите почту *">
+            <div class="form-fieldset__group fieldset-group--info fieldset-group">
+              <label class="fieldset-group__label--mail fieldset-group__label" for="mail">Адрес почты</label>
+              <input class="fieldset-group__input--mail fieldset-group__input" type="text" id="mail" name="mail" placeholder="Введите почту *">
             </div>
           </fieldset>
 
-          <fieldset class="form__fieldset form-fieldset">
+          <fieldset class="form__fieldset form-fieldset--application form-fieldset">
             <legend class="form-fieldset__legend">С каким приложением путешествовали?</legend>
             <ul class="form-fieldset__list">
               <li class="form-fieldset__item fieldset-item">
@@ -146,10 +152,10 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset form-fieldset">
+          <fieldset class="form__fieldset form-fieldset--emotions form-fieldset">
             <legend class="form-fieldset__legend">Опишите свои эмоции</legend>
             <label class="visually-hidden" for="rt"></label>
-            <textarea class="form-fieldset__textarea" rows="10" cols="35" name="" id="rt" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="form-fieldset__textarea" rows="10" name="" id="rt" placeholder="Можно прям в красках, не стесняясь в выражениях. У нас свобода слова, говори как есть."></textarea>
           </fieldset>
 
           <div class="form__wrapper">
@@ -157,7 +163,7 @@
               <span class="form-button__description">Отправить форму</span>
             </button>
 
-            <p class="form__description"><span class="form__span">*</span> — обязательные для заполнения поля</p>
+            <p class="form__wrapper-description"><span class="form__span">*</span> — обязательные <span class="form__span--delete">для заполнения</span> поля</p>
           </div>
         </form>
 
