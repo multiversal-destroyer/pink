@@ -40,14 +40,26 @@
 
     <main class="main">
       <section class="photo">
-        <h1 class="photo__title main-background">Фотографии пользователей</h1>
+        <h1 class="photo__title">Фотографии пользователей</h1>
 
         <p class="photo__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
+        <div class="card--daily card marker--daily">
+          <img class="card__image--daily card__image" src="/source/img/panorama-tablet.png" alt="">
+          <div class="card__wrapper--daily card__wrapper">
+            <div class="card__wrapper-user">
+              <h2 class="card__title">Анна</h2>
+              <span class="card__time">(5 минут назад)</span>
+            </div>
+            <p class="card__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <span class="card__like--daily card__like">Нравится: 215</span>
+          </div>
+        </div>
+
         <ul class="photo-cards">
-          <li class="photo-cards__item">
+          <!-- <li class="photo-cards__item photo-cards__item--daily">
             <div class="card">
-              <img class="card__image card__image--daily" src="/source/img/panorama-tablet.png" alt="">
+              <img class="card__image--daily card__image" src="/source/img/panorama-tablet.png" alt="">
               <div class="card__wrapper">
                 <div class="card__wrapper-user">
                   <h2 class="card__title">Анна</h2>
@@ -57,7 +69,7 @@
                 <span class="card__like">Нравится: 215</span>
               </div>
             </div>
-          </li>
+          </li> -->
           <li class="photo-cards__item">
             <div class="card">
               <img class="card__image" src="/source/img/photo-1-mobile.png" alt="">

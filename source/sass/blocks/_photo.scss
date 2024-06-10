@@ -1,26 +1,146 @@
 .photo {
-
+  
   &__title {
+    background-image: url("/source/img/back-desktop.png");
     font-size: 24px;
     font-weight: 300;
     color: $basic-white;
+    padding: 102px 46px 84px 46px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 50px;
+      padding: 191px 150px 143px 150px;
+    }
   }
 
   &__description {
     font-size: 14px;
     line-height: 30px;
+    text-align: center;
+    padding: 54px 20px 60px 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      padding: 100px 50px 85px 50px;
+    }
+  }
+}
+
+.photo-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 130px;
+  }
+
+  // &__item {
+
+  //   &--daily {
+  //     grid-column: 1 / -1;
+  //   }
+  // }
+}
+
+.marker {
+
+  &--daily {
+    &::after {
+      box-sizing: border-box;
+      content: "Панорама дня";
+      position: absolute;
+      background-color: $pink;
+      color: $basic-white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      width: 140px;
+      // height: 36px;
+      font-size: 12px;
+      padding: 6px;
+      right: 20px;
+
+      @media (min-width: $tablet-width) {
+        top: 57px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 130px;
+      }
+    }
   }
 }
 
 .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   line-height: 24px;
+  height: 100%;
+
+  &--daily {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 50px;
+    }
+  }
 
   &__image {
     display: block;
+    // margin: 0 6%;
+    margin: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+
+    &--daily {
+      margin: 0;
+    }
   }
 
   &__wrapper {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     background-color: $gray-light;
+    padding: 25px 10px 25px 17px;
+    // margin: 0 auto;
+    // width: 280px;
+    // margin: 0 6%;
+    margin: 0 20px;
+
+    flex: 1;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      padding: 30px;
+    }
+
+    &--daily {
+
+      @media (min-width: $tablet-width) {
+        margin: 0 20px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin: 0 130px;
+      }
+    }
   }
 
   &__wrapper-user {
@@ -30,6 +150,7 @@
   &__title {
     font-size: 14px;
     font-weight: 700;
+    margin-right: 3px;
   }
 
   &__time {
@@ -40,13 +161,60 @@
 
   &__description {
     font-size: 14px;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: auto;
+    }
   }
 
   &__like {
+    position: relative;
     color: $pink;
     font-size: 12px;
     text-transform: uppercase;
+    margin-left: 31px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("/source/img/svg/heart.svg");
+      width: 13px;
+      height: 12px;
+      left: -30px;
+      top: 6px;
+
+      @media (min-width: $tablet-width) {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &--daily {
+
+      @media (min-width: $tablet-width) {
+        position: absolute;
+        right: 59px;
+      }
+    }
   }
 }
 
+.card__wrapper--daily .card__like {
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
 
+    &::after {
+      right: -30px;
+    }
+  }
+}
