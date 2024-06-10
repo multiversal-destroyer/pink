@@ -1,15 +1,62 @@
 .modal-section {
+  margin: 0 auto;
+  background-color: $basic-white;
+  // padding: 44px 22px 51px 22px;
+  padding-top: 44px;
+  text-align: center;
+  box-shadow: 0 7px 15px $shadow-form-error;
+
+  @media (min-width: $tablet-width) {
+    min-width: 460px;
+    width: 65%;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 780px;
+  }
 
   &__title {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     color: $basic-black;
+    margin-bottom: 37px;
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      padding: 0 65px;
+    }
   }
 
   &__description {
     font-size: 14px;
     line-height: 24px;
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      // padding: 0 55px;
+      padding: 0 12%;
+      font-size: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 200px;
+    }
+
+    &--error {
+      margin-bottom: 50px;
+    }
+
+    &--success {
+      margin-bottom: 41px;
+
+    }
+  }
+
+  &__wrapper {
+    background-color: $gray-light;
+    padding: 52px 0;
   }
 }
 
@@ -17,7 +64,31 @@
   background-color: $green;
   padding: 23px 20px;
   border-radius: 2px;
-  width: 276px;
+  min-width: 276px;
+  width: 43%;
+
+  @media (min-width: $tablet-width) {
+    width: 296px;
+
+    &--success {
+      min-width: 296px;
+      width: 58%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 296px;
+    width: 35%;
+
+    &--success {
+      min-width: 456px;
+      width: 50%;
+    }
+  }
+
+  &--error {
+    margin-bottom: 52px;
+  }
 
   &__description {
     font-size: 18px;
