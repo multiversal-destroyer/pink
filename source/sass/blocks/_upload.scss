@@ -41,9 +41,17 @@
 
 .upload-form {
 
+  &__wrapper-image {
+    display: flex;
+    justify-content: center;
+  }
+
   &__image {
     display: block;
     margin-bottom: 42px;
+    max-width: 380px;
+    width: 100%;
+    object-fit: cover;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;

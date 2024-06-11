@@ -1,8 +1,10 @@
 .photo {
-  
+
   &__title {
-    background-image: url("/source/img/back-desktop.png");
+    background-image: url("/source/img/back-mobile.png");
     font-size: 24px;
+    background-size: cover;
+    background-position: 50% 10%;
     font-weight: 300;
     color: $basic-white;
     padding: 102px 46px 84px 46px;
@@ -11,6 +13,11 @@
     @media (min-width: $tablet-width) {
       font-size: 50px;
       padding: 191px 150px 143px 150px;
+      background-image: url("/source/img/back-tablet.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("/source/img/back-desktop.png");
     }
   }
 
@@ -23,6 +30,10 @@
     @media (min-width: $tablet-width) {
       font-size: 18px;
       padding: 100px 50px 85px 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 100px 300px 97px 300px;
     }
   }
 }
