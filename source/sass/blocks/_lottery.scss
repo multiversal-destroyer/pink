@@ -3,7 +3,9 @@
 .lottery {
 
   &__title {
-    background-image: url("/source/img/back-desktop.png");
+    background-image: url("/source/img/back-mobile.png");
+    background-size: cover;
+    background-position: 50% 10%;
     font-size: 24px;
     font-weight: 300;
     color: $basic-white;
@@ -11,11 +13,13 @@
     text-align: center;
 
     @media (min-width: $tablet-width) {
+      background-image: url("/source/img/back-tablet.png");
       font-size: 50px;
       padding: 191px 46px 74px 46px;
     }
 
     @media (min-width: $desktop-width) {
+      background-image: url("/source/img/back-desktop.png");
       padding: 191px 146px 74px 146px;
     }
   }
