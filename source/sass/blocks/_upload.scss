@@ -1,33 +1,213 @@
 .upload {
+  box-sizing: border-box;
 
   &__description {
     font-size: 14px;
     line-height: 30px;
+    text-align: center;
+    padding: 49px 20px 52px 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      padding: 73px 20px 78px 20px;
+    }
   }
 
   &__form {
+    display: flex;
+    flex-direction: column;
     background-color: $gray-light;
+    padding: 20px 20px 41px 20px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: center;
+      padding: 57px 20px 54px 20px;
+      column-gap: 8.2%; // 50px
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 130px;
+    }
+  }
+
+  &__tools {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
   }
 }
 
 .upload-form {
 
+  &__image {
+    display: block;
+    margin-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+
   &__finding {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      column-gap: 44px;
+    }
   }
 
   &__button {
     border: 3px solid $pink;
     border-radius: 29px;
-    padding: 18px 35px; // -3
+    padding: calc(21px - 3px) calc(38px - 3px); // -3 21 38
     color: $pink;
     font-weight: 700;
     width: 280px;
     font-size: 18px;
     line-height: 18px;
+
+    @media (min-width: $desktop-width) {
+      width: 183px;
+    }
   }
 }
 
+.tools {
+  margin-bottom: 75px;
 
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 11%; // 35px
 
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+      row-gap: 52px;
+      margin-top: 9px;
+    }
+
+    @media (min-width: $desktop-width) {
+      row-gap: 30px;
+    }
+  }
+
+  &__controls {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 78px;
+    }
+
+    @media (min-width: $desktop-width) {
+      row-gap: 77px;
+    }
+
+  }
+
+  &__icon {
+    fill: $main-gray30;
+
+    @media (min-width: $tablet-width) {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $main-gray10;
+        width: 275px;
+        height: 1px;
+        left: 2px;
+        top: calc(22px + 23px);
+
+        @media (min-width: $desktop-width) {
+          top: calc(44px + 13px);
+          width: 410px;
+
+        }
+      }
+    }
+
+    &--active .tools__icon {
+      fill: $pink;
+    }
+  }
+}
+
+.control {
+  position: relative;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &__bar {
+    position: absolute;
+    width: calc(240px - 24px + 8%); // 240px
+    height: 2px;
+    background-color: $main-gray;
+    top: 39px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet-width) {
+      left: 130px;
+      top: 20px;
+      width: 202px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 170px;
+      width: 288px;
+      top: 28px;
+    }
+  }
+
+  &__switcher {
+    position: absolute;
+    cursor: pointer;
+    width: calc(14px - 2px);
+    height: calc(14px - 2px);
+    background: $basic-white;
+    border: 2px solid $pink;
+    border-radius: 50%;
+    left: 81%; // 193px
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+.tools__button:last-child::after {
+  display: none;
+}

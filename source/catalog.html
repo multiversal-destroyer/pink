@@ -153,7 +153,7 @@
 
       <section class="upload">
         <h2 class="visually-hidden">Фоторедактор</h2>
-        <p class="upload__description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="upload__description">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</p>
 
         <form class="upload__form upload-form">
           <img class="upload-form__image" src="/source/img/photo-7-mobile.png" alt="">
@@ -161,34 +161,37 @@
             <div class="upload__tools tools">
               <div class="tools__list">
                 <button class="tools__button tools__button--crop tools__button--active button" aria-label="Обрезать">
-                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 28h4V12a4 4 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4H12Z" fill="#283645"/>
+                  <svg class="tools__icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 28h4V12a4 4 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4H12Z"/>
                   </svg>
                 </button>
                 <button class="tools__button tools__button--fill button" aria-label="Залить">
-                  <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M33.12 17.88 15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24ZM10.41 20 20 10.42 29.59 20H10.41ZM38 23s-4 4.33-4 7a4 4 0 1 0 8 0c0-2.67-4-7-4-7ZM48 40H0v3h48v-3Z" fill="#283645"/>
+                  <svg class="tools__icon" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.12 17.88 15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24ZM10.41 20 20 10.42 29.59 20H10.41ZM38 23s-4 4.33-4 7a4 4 0 1 0 8 0c0-2.67-4-7-4-7ZM48 40H0v3h48v-3Z"/>
                   </svg>
                 </button>
                 <button class="tools__button tools__button--contrast button" aria-label="Контраст">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 4a12 12 0 1 1 0 24 12 12 0 0 1 0-24Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z" fill="#283645"/>
-                    <path d="M16 24.29a8.52 8.52 0 0 0 0-17" fill="#283645"/>
+                  <svg class="tools__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4a12 12 0 1 1 0 24 12 12 0 0 1 0-24Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z"/>
+                    <path d="M16 24.29a8.52 8.52 0 0 0 0-17"/>
                   </svg>
                 </button>
               </div>
-              <div class="upload__controls">
+              <div class="tools__controls">
                 <div class="control control--crop control--active">
-                  <span class="control__bar"></span>
-                  <span class="control__switcher" aria-label="Ползунок изменения размера"></span>
+                  <div class="control__bar">
+                    <span class="control__switcher" aria-label="Ползунок изменения размера"></span>
+                  </div>
                 </div>
                 <div class="control control--fill">
-                  <span class="control__bar"></span>
-                  <span class="control__switcher" aria-label="Ползунок изменения заливки"></span>
+                  <div class="control__bar">
+                    <span class="control__switcher" aria-label="Ползунок изменения заливки"></span>
+                  </div>
                 </div>
                 <div class="control control--contrast">
-                  <span class="control__bar"></span>
-                  <span class="control__switcher" aria-label="Ползунок изменения контраста"></span>
+                  <div class="control__bar">
+                    <span class="control__switcher" aria-label="Ползунок изменения контраста"></span>
+                  </div>
                 </div>
               </div>
             </div>
