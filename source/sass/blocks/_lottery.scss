@@ -289,39 +289,49 @@
     }
   }
 
+  &__input-wrapper {
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $gray-table-border;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: calc(70px - 2px * 2);
+        height: calc(70px - 2px * 2);
+        z-index: 20;
+        right: 2px;
+        top: 2px;
+      }
+
+      &--phone {
+        &::before {
+          background-image: url("/source/img/svg/phone-icon.svg");
+        }
+      }
+
+      &--mail {
+        &::before {
+          background-image: url("/source/img/svg/mail-icon.svg");
+        }
+      }
+    }
+  }
+
   &__input {
     position: relative;
     box-sizing: border-box;
     border: 2px solid $gray-table-border;
-    padding: 18px 0 18px 20px;
+    border-radius: 2px;
+    padding: 18px calc(70px + 20px) 18px 20px;
     font-size: 18px;
     line-height: 30px;
     width: 100%;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   background-color: $gray-table-border;
-    //   width: 59px;
-    //   height: 59px;
-    //   z-index: 20;
-    // }
-
-    // @media (min-width: $tablet-width) {
-
-
-    // }
   }
 }
-
-// .fieldset-group__input::before {
-//     content: "";
-//     position: absolute;
-//     background-color: $gray-table-border;
-//     width: 59px;
-//     height: 59px;
-//     z-index: 20;
-// }
 
 .fieldset-item {
 
