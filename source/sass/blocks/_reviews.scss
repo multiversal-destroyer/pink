@@ -1,9 +1,22 @@
 .reviews {
-  padding: 50px 0 60px 0;
+  padding: 50px 0 0 0;
   position: relative;
+  background-color: $basic-white;
+  z-index: 1;
 
   @media (min-width: $desktop-width) {
     padding: 193px 0 40px 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 79px;
+      height: 63px;
+      background-image: url("/source/img/svg/quotes.svg");
+      top: 72px;
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 

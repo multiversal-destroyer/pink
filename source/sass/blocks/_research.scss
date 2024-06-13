@@ -7,13 +7,12 @@
     background-color: $basic-white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 138px;
+    padding: 102px 20px 29px 20px;
   }
 
   @media (min-width: $desktop-width) {
     background-color: $gray-light;
     padding: 115px 166px 120px 0;
-    margin-bottom: 0;
   }
 
   &__wrapper {
@@ -22,6 +21,27 @@
     justify-content: center;
     row-gap: 24px;
     grid-column: 2 / -1;
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("/source/img/diagram-tablet.png");
+        width: 238px;
+        height: 276px;
+        top: 60px;
+        right: 60%;
+        background-repeat: no-repeat;
+
+        @media (min-width: $desktop-width) {
+          background-image: url("/source/img/diagram-desktop.png");
+          width: 298px;
+          height: 345px;
+          top: 0;
+          right: 62%;
+        }
+      }
+    }
   }
 
   &__title {
@@ -34,12 +54,20 @@
   &__description {
     font-size: 14px;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
   }
 
   &__link {
     font-size: 14px;
     line-height: 24px;
     color: $pink;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
   }
 }
 
