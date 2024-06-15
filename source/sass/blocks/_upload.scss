@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     background-color: $gray-light;
-    padding: 20px 20px 41px 20px;
+    padding: 20px;
 
     @media (min-width: $tablet-width) {
       flex-direction: row;
@@ -40,22 +40,37 @@
 }
 
 .upload-form {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $main-gray10;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 201px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   &__wrapper-image {
     display: flex;
     justify-content: center;
-  }
-
-  &__image {
-    display: block;
     margin-bottom: 42px;
-    max-width: 380px;
-    width: 100%;
-    object-fit: cover;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
     }
+  }
+
+  &__image {
+    display: block;
+    max-width: 380px;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__wrapper {
@@ -65,10 +80,12 @@
   }
 
   &__finding {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 12px;
+    padding: 38px 0 calc(41px - 20px) 0;
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
@@ -130,6 +147,7 @@
     fill: $main-gray30;
 
     @media (min-width: $tablet-width) {
+      fill: $pink;
       width: 22px;
       height: 22px;
     }
@@ -143,9 +161,9 @@
   &__button {
     position: relative;
 
-    @media (min-width: $tablet-width) {
+    &::after {
 
-      &::after {
+      @media (min-width: $tablet-width) {
         content: "";
         position: absolute;
         background-color: $main-gray10;
@@ -153,12 +171,11 @@
         height: 1px;
         left: 2px;
         top: calc(22px + 23px);
+      }
 
-        @media (min-width: $desktop-width) {
-          top: calc(44px + 13px);
-          width: 410px;
-
-        }
+      @media (min-width: $desktop-width) {
+        top: calc(44px + 13px);
+        width: 410px;
       }
     }
 
@@ -217,5 +234,7 @@
 }
 
 .tools__button:last-child::after {
-  display: none;
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

@@ -5,11 +5,15 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Open Sans";
   font-size: 18px;
   color: $main-gray;
-
+  min-height: 100%;
 }
 
 img {
@@ -46,6 +50,10 @@ textarea::placeholder {
   cursor: pointer;
 }
 
-.main-background {
-  background-image: url("/source/img/back-desktop.png");
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  flex-grow: 1;
 }
