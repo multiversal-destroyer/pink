@@ -9,13 +9,14 @@
 
   <body>
     <header class="header">
-      <nav class="header-navigation--open header__navigation header-navigation">
+      <!-- header-navigation--open -->
+      <nav class="header__navigation header-navigation">
         <a class="header-navigation__link-logo" href="index.html">
-          <img class="header-navigation__logo--mobile header-navigation__logo" src="img/svg/lobo_mobile.svg" width="74" height="23" alt="Логотип Pink">
+          <!-- <img class="header-navigation__logo--mobile header-navigation__logo" src="img/svg/lobo_mobile.svg" width="74" height="23" alt="Логотип Pink">
           <img class="header-navigation__logo--tablet header-navigation__logo" src="img/svg/logotype-white-tablet.svg" width="145" height="40" alt="Логотип Pink">
-          <img class="header-navigation__logo--desktop header-navigation__logo" src="img/svg/logotype-white-desktop.svg" width="147" height="40" alt="Логотип Pink">
+          <img class="header-navigation__logo--desktop header-navigation__logo" src="img/svg/logotype-white-desktop.svg" width="147" height="40" alt="Логотип Pink"> -->
 
-          <!-- <svg class="header-navigation__logo--mobile header-navigation__logo" width="74" height="23">
+          <svg class="header-navigation__logo--mobile header-navigation__logo" width="74" height="23">
             <use xlink:href="img/sprite.svg#logo-mobile"></use>
           </svg>
           <svg class="header-navigation__logo--tablet header-navigation__logo" width="145" height="40">
@@ -23,15 +24,14 @@
           </svg>
           <svg class="header-navigation__logo--desktop header-navigation__logo" width="147" height="40">
             <use xlink:href="img/sprite.svg#logo-desktop"></use>
-          </svg> -->
+          </svg>
         </a>
         <button class="header-navigation__toggle button">
-          <svg class="menu-icon menu-icon--open" width="50" height="24" viewBox="0 0 50 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Открыть меню">
-            <path d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 0 0 0 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 3V1a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 13v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 23v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Z" fill="#fff"/>
+          <svg class="menu-icon--open menu-icon" width="50" height="24" aria-label="Открыть меню">
+            <use xlink:href="img/sprite.svg#menu-icon--open"></use>
           </svg>
-          <svg class="menu-icon menu-icon--close" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Закрыть меню">
-            <path d="M20.85 0 0 20.85 2.15 23 23 2.15 20.85 0Z" fill="#fff"/>
-            <path d="M2.15 0 0 2.15 20.85 23 23 20.85 2.15 0Z" fill="#fff"/>
+          <svg class="menu-icon--close menu-icon" width="23" height="23" aria-label="Закрыть меню">
+            <use xlink:href="img/sprite.svg#menu-icon--close"></use>
           </svg>
         </button>
         <ul class="header-navigation__list">
@@ -129,14 +129,14 @@
           </ul>
           <div class="reviews-slider__wrapper reviews-controls">
             <button class="reviews-controls__button reviews-controls__button--prev button" type="button">
-              <svg class="arrow-icon--prev arrow-icon" width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity=".3" d="m2.04 20.5 19.7-19.09A.82.82 0 0 0 22 .83a.8.8 0 0 0-.25-.59.86.86 0 0 0-.61-.24.88.88 0 0 0-.6.24L.24 19.91a.83.83 0 0 0-.25.59.81.81 0 0 0 .25.59l20.28 19.67a.9.9 0 0 0 1.09.1c.14-.1.25-.22.31-.38a.8.8 0 0 0-.18-.9L2.05 20.5Z" fill="#283645"/>
+              <svg class="arrow-icon--prev arrow-icon" width="22" height="41">
+                <use xlink:href="img/sprite.svg#arrow-icon"></use>
               </svg>
               <span class="visually-hidden">Предыдущий отзыв</span>
             </button>
             <button class="reviews-controls__button reviews-controls__button--next button" type="button">
-              <svg class="arrow-icon--next arrow-icon" width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity=".3" d="m2.04 20.5 19.7-19.09A.82.82 0 0 0 22 .83a.8.8 0 0 0-.25-.59.86.86 0 0 0-.61-.24.88.88 0 0 0-.6.24L.24 19.91a.83.83 0 0 0-.25.59.81.81 0 0 0 .25.59l20.28 19.67a.9.9 0 0 0 1.09.1c.14-.1.25-.22.31-.38a.8.8 0 0 0-.18-.9L2.05 20.5Z" fill="#283645"/>
+              <svg class="arrow-icon--next arrow-icon" width="22" height="41">
+                <use xlink:href="img/sprite.svg#arrow-icon"></use>
               </svg>
               <span class="visually-hidden">Следующий отзыв</span>
             </button>
