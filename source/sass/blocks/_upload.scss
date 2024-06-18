@@ -94,14 +94,42 @@
   }
 
   &__button {
-    border: 3px solid $pink;
     border-radius: 29px;
     padding: calc(21px - 3px) calc(38px - 3px); // -3 21 38
-    color: $pink;
     font-weight: 700;
     width: 280px;
     font-size: 18px;
     line-height: 18px;
+
+    &--post {
+      border: 3px solid $pink;
+      color: $pink;
+
+      &:hover {
+        background-color: $pink;
+        color: $basic-white;
+      }
+
+      &:active {
+        background-color: $pink;
+        color: $basic-white30;
+      }
+    }
+
+    &--cancel {
+      border: 3px solid $main-gray;
+      color: $main-gray;
+      opacity: 0.1;
+
+      &:hover {
+        opacity: 0.3;
+      }
+
+      &:active {
+        background-color: $main-gray;
+        color: $basic-white30;
+      }
+    }
 
     @media (min-width: $desktop-width) {
       width: 183px;
@@ -230,6 +258,9 @@
     left: 81%; // 193px
     transform: translate(-50%, -50%);
 
+    &:active {
+      background: $pink;
+    }
   }
 }
 
