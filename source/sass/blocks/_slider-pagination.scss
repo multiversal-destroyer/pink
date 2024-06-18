@@ -9,10 +9,21 @@
     height: 6px;
     border-radius: 50%;
 
+    &:hover {
+      background-color: $main-gray60;
+    }
+
+    &:active {
+      background-color: $main-gray10;
+    }
+
     &--current {
       background-color: $basic-white;
       outline: 3px solid $main-gray;
 
+      &:hover {
+        background-color: inherit;
+      }
     }
   }
 

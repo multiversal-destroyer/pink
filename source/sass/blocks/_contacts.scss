@@ -72,4 +72,17 @@
       font-style: normal;
     }
   }
+
+  &__link {
+
+    &:hover {
+      color: $main-gray;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $main-gray30;
+      text-decoration: none;
+    }
+  }
 }

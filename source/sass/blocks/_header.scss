@@ -31,9 +31,28 @@
   }
 
   &__link {
+    position: relative;
     line-height: 18px;
     text-decoration: none;
     color: $basic-white;
+
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      color: $basic-white30;
+    }
+
+    &--active::after {
+      position: absolute;
+      content: "";
+      background-color: $basic-white;
+      width: 100%;
+      height: 2px;
+      top: 35px;
+      transform: translate(-100%);
+    }
   }
 
   &__link-logo {
@@ -120,8 +139,4 @@
       display: inline;
     }
   }
-}
-
-.header-navigation__logo--mobile {
-  fill: $basic-white;
 }

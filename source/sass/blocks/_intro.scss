@@ -151,6 +151,16 @@
   min-width: 280px;
   z-index: 2;
 
+  &:hover {
+    color: $pink;
+    background-color: $basic-white;
+  }
+
+  &:active {
+    color: $pink30;
+    background-color: $basic-white;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 12px 20px;
   }

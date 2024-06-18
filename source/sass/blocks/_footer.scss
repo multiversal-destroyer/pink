@@ -43,7 +43,6 @@
     display: flex;
     column-gap: 15px;
     align-items: center;
-
   }
 }
 
@@ -51,7 +50,7 @@
 
   &__list {
     display: flex;
-    column-gap: 50px;
+    column-gap: 15px;
     list-style: none;
   }
 
@@ -59,18 +58,32 @@
     position: relative;
   }
 
-  &__link::after {
-    content: "";
-    position: absolute;
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
     width: 48px;
     height: 48px;
     border: 3px solid $main-gray10;
     border-radius: 50%;
-    top: -50%;
     left: 50%;
     transform: translate(-50%);
+
+    &:hover {
+      border: 3px solid $main-gray;
+    }
+
+    &:active {
+      border: 3px solid $main-gray10;
+
+      & .footer-icon {
+        opacity: 0.3;
+      }
+    }
   }
 }
+
+
 
 .footer-logo {
 
