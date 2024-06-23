@@ -137,6 +137,18 @@
   padding: 23px 45px;
   border-radius: 2px;
 
+  &:hover {
+    background-color: $green-darker;
+  }
+
+  &:active .form-button__description {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: $gray-table-border;
+  }
+
   &__description {
     font-size: 18px;
     font-weight: 700;
@@ -334,6 +346,14 @@
     font-size: 18px;
     line-height: 30px;
     width: 100%;
+
+    &:focus {
+      border: 2px solid $pink;
+    }
+
+    &:hover {
+      border: 2px solid $main-gray;
+    }
   }
 }
 

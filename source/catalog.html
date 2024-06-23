@@ -13,13 +13,13 @@
       <nav class="header__navigation header-navigation">
         <a class="header-navigation__link-logo" href="index.html">
           <svg class="header-navigation__logo--mobile header-navigation__logo" width="74" height="23">
-            <use xlink:href="img/sprite.svg#logo-mobile"></use>
+            <use class="header-navigation__logo-use--mobile header-navigation__logo-use" xlink:href="img/sprite.svg#header-logo--mobile"></use>
           </svg>
           <svg class="header-navigation__logo--tablet header-navigation__logo" width="145" height="40">
-            <use xlink:href="img/sprite.svg#logo-tablet"></use>
+            <use class="header-navigation__logo-use--tablet header-navigation__logo-use" xlink:href="img/sprite.svg#header-logo--tablet"></use>
           </svg>
           <svg class="header-navigation__logo--desktop header-navigation__logo" width="147" height="40">
-            <use xlink:href="img/sprite.svg#logo-desktop"></use>
+            <use class="header-navigation__logo-use--desktop header-navigation__logo-use" xlink:href="img/sprite.svg#header-logo--desktop"></use>
           </svg>
         </a>
         <button class="header-navigation__toggle button">
@@ -38,7 +38,7 @@
             <a href="catalog.html" class="header-navigation__link--active header-navigation__link">Фотографии</a>
           </li>
           <li class="header-navigation__item">
-            <a href="form.html" class="header-navigation__link">Конкурс</a>
+            <a href="form.html" class=" header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
             <a href="catalog.html" class="header-navigation__link">HTML Academy</a>
@@ -199,19 +199,28 @@
             <div class="upload__tools tools">
               <div class="tools__list">
                 <button class="tools__button tools__button--crop tools__button--active button" aria-label="Обрезать">
-                  <svg class="tools__icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- <svg class="tools__icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M32 28h4V12a4 4 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4H12Z"/>
+                  </svg> -->
+                  <svg class="tools__icon" width="44" height="44">
+                    <use class="tools__use" xlink:href="img/sprite.svg#crop-icon"></use>
                   </svg>
                 </button>
                 <button class="tools__button tools__button--fill button" aria-label="Залить">
-                  <svg class="tools__icon" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- <svg class="tools__icon" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M33.12 17.88 15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24ZM10.41 20 20 10.42 29.59 20H10.41ZM38 23s-4 4.33-4 7a4 4 0 1 0 8 0c0-2.67-4-7-4-7ZM48 40H0v3h48v-3Z"/>
+                  </svg> -->
+                  <svg class="tools__icon" width="48" height="44">
+                    <use class="tools__use" xlink:href="img/sprite.svg#fill-icon"></use>
                   </svg>
                 </button>
                 <button class="tools__button tools__button--contrast button" aria-label="Контраст">
-                  <svg class="tools__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- <svg class="tools__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 4a12 12 0 1 1 0 24 12 12 0 0 1 0-24Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z"/>
                     <path d="M16 24.29a8.52 8.52 0 0 0 0-17"/>
+                  </svg> -->
+                  <svg class="tools__icon" width="32" height="32">
+                    <use class="tools__use" xlink:href="img/sprite.svg#contrast-icon"></use>
                   </svg>
                 </button>
               </div>
@@ -243,8 +252,14 @@
     </main>
 
     <footer class="footer">
-      <img class="footer-logo--tablet footer-logo" src="/source/img/svg/logotype-blue-tablet.svg" alt="">
-      <img class="footer-logo--desktop footer-logo" src="/source/img/svg/logotype-blue-desktop.svg" alt="">
+      <a class="footer__link-logo" href="index.html">
+        <svg class="footer__logo--tablet footer__logo" width="145" height="40">
+          <use class="footer__logo-use--tablet footer__logo-use" xlink:href="img/sprite.svg#footer-logo--tablet"></use>
+        </svg>
+        <svg class="footer__logo--desktop footer__logo" width="147" height="40">
+          <use class="footer__logo-use--desktop footer__logo-use" xlink:href="img/sprite.svg#footer-logo--desktop"></use>
+        </svg>
+      </a>
       <div class="footer__item footer-item">
         <h2 class="visually-hidden">Соцсети</h2>
         <ul class="footer-socials footer-socials__list">
@@ -268,7 +283,9 @@
       <div class="footer__item footer-item footer-item--academy">
         <h2 class="footer-item__title">Разработано</h2>
         <a class="footer-item__academy-link" href="#">
-          <img class="academy-logo" src="/source/img/svg/html-academy.svg" width="27" height="34" alt="">
+          <svg class="footer-item__academy-logo" width="27" height="34">
+            <use class="footer-item__academy-logo-use" xlink:href="img/sprite.svg#academy-logo"></use>
+          </svg>
         </a>
       </div>
     </footer>

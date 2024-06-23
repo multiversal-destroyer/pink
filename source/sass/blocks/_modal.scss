@@ -67,6 +67,18 @@
   min-width: 276px;
   width: 43%;
 
+  &:hover {
+    background-color: $green-darker;
+  }
+
+  &:active .modal-button__description {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: $gray-table-border;
+  }
+
   @media (min-width: $tablet-width) {
     width: 296px;
 

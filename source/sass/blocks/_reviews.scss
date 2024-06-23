@@ -127,3 +127,16 @@
     display: none;
   }
 }
+
+.arrow-use {
+  fill: $main-gray;
+  opacity: 0.3;
+}
+
+.reviews-controls__button:hover .arrow-use {
+  opacity: 0.6;
+}
+
+.reviews-controls__button:active .arrow-use {
+  opacity: 0.1;
+}

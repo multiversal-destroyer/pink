@@ -85,7 +85,7 @@
 
 
 
-.footer-logo {
+.footer__logo {
 
   &--tablet {
     display: none;
@@ -104,4 +104,34 @@
   }
 }
 
+.footer__logo-use {
+  fill: black;
+}
 
+.footer__logo-use--tablet,
+.footer__logo-use--desktop {
+  // fill: white;
+  color: #D22856;
+}
+
+.footer__link-logo:hover .footer__logo-use {
+  fill: #D22856;
+}
+
+.footer__link-logo:active .footer__logo-use {
+  fill: black;
+  opacity: 0.3;
+}
+
+.footer-item__academy-logo-use {
+  fill: $pink;
+}
+
+.footer-item__academy-link:hover .footer-item__academy-logo-use {
+  fill: $main-gray;
+}
+
+.footer-item__academy-link:active .footer-item__academy-logo-use {
+  fill: $main-gray;
+  opacity: 0.3;
+}
